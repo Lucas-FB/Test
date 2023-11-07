@@ -9,7 +9,7 @@
 <tr>
   <th colspan="2">The table header</th
 <td align=center>
-<img src="images/tomcat.gif">
+<img src="images/tomcat.gif" alt="Tomcat">
 </td>
 <td>
 <h1>Sample Application JSP Page</h1>
