@@ -51,6 +51,7 @@ jobs:
           ls 
           apk add mysql mysql-client
           apk add openssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > EPSI2023_G1.pem
           ssh -i "EPSI2023_G1.pem" admin@ec2-13-37-215-179.eu-west-3.compute.amazonaws.com -fN -L 0.0.0.0:3307:127.0.0.1:3306
           apk add go-ipfs
           ipfs init
