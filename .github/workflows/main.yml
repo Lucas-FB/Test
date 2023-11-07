@@ -2,7 +2,7 @@ name: Industrialisation continue sur le serveur AWS (Tomcat)
 on: push
 jobs:
   Deploy:
-    name: Deploy
+    name: Package AWS
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -17,3 +17,26 @@ jobs:
         port: ${{ secrets.DEPLOY_PORT }}
         source: "Fleurden.war"
         target: "/opt/tomcat/webapps"
+        
+jobs:
+  Deploy:
+    name: SAV IPFS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: |
+          jar cvf fichier.war *
+      - uses: jirutka/setup-alpine@v1
+        with:
+          branch: v3.15
+      - run: |
+          apk add go-ipfs
+          ipfs init
+          ipfs daemon &
+        shell: alpine.sh --root {0}
+      - name: Sauvegarde fichier war sur IPFS
+        run: |
+          ls -la 
+          ipfs swarm peers
+          ipfs add fichier.war
+        shell: alpine.sh --root {0}
