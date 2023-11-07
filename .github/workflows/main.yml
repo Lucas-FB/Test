@@ -48,10 +48,11 @@ jobs:
         with:
           branch: v3.15
       - run: |
-          ls
+          ls -la 
           pwd
           cd ..
           pwd
+          ls -la 
           apk add mysql mysql-client
           apk add openssh
           echo "${{ secrets.EC2_SSH_KEY }}" > EPSI2023_G1.pem
