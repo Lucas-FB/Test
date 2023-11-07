@@ -41,7 +41,7 @@ jobs:
         shell: alpine.sh --root {0}
 
   upload_dump:
-      name: Upload Dump
+    name: Upload Dump
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
