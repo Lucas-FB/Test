@@ -7,6 +7,7 @@
 
 <table border="0">
 <tr>
+  <th colspan="2">The table header</th
 <td align=center>
 <img src="images/tomcat.gif">
 </td>
