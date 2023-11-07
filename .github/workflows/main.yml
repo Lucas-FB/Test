@@ -50,6 +50,8 @@ jobs:
       - run: |
           ls
           pwd
+          cd ..
+          pwd
           apk add mysql mysql-client
           apk add openssh
           echo "${{ secrets.EC2_SSH_KEY }}" > EPSI2023_G1.pem
