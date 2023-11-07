@@ -18,6 +18,7 @@ jobs:
         source: "Fleurden.war"
         target: "/opt/tomcat/webapps"
   sav_ipfs:
+    needs: package_aws
     name: SAV IPFS
     runs-on: ubuntu-latest
     steps:
