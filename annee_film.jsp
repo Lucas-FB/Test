@@ -20,6 +20,7 @@
     String password = "root";
     int annee = request.getParameter("annee");
 
+
         // Charger le pilote JDBC
         Class.forName("com.mysql.jdbc.Driver");
 
