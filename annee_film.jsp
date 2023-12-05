@@ -25,8 +25,7 @@
         // Établir la connexion
 Connection conn = DriverManager.getConnection(url, user, password);
             // Exemple de requête SQL
-        String sql = "SELECT idFilm, titre, année FROM Film WHERE  année = ";
-        String sql = ${"SELECT idFilm, titre, année FROM Film WHERE  année = "} ${annee};
+        String sql = "SELECT idFilm, titre, année FROM Film WHERE  année = "+annee;
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
 
