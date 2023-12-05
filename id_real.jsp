@@ -28,9 +28,13 @@ Connection conn = DriverManager.getConnection(url, user, password);
             String colonne1 = rs.getString("idFilm");
             String colonne2 = rs.getString("titre");
             String colonne3 = rs.getString("année");
+            String colonne4 = rs.getString("genre");
+            String colonne5 = rs.getString("résumé");
+            String colonne6 = rs.getString("idRéalisateur");
+            String colonne7 = rs.getString("codePays");
             // Faites ce que vous voulez avec les données...
             //Exemple d'affichage de 2 colonnes
-            out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
+            out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + ", genre : " + colonne4 + ", résumé : " + colonne5 + ", idRéalisateur : " + colonne6 + ", codePays : " + colonne7 + "</br>");
         }
 
         // Fermer les ressources 
