@@ -43,7 +43,7 @@
         // Établir la connexion
 Connection conn = DriverManager.getConnection(url, user, password);
             // Exemple de requête SQL
-        String sql = "INSERT INTO Film (titre, année, genre, résumé, idRéalisateur, codePays) VALUES ("+titre+", "+annee+", "+genre+", "+resume+", "+id_real+", "+code_pays+");";
+        String sql = "INSERT INTO Film (idFilm, titre, année, genre, résumé, idRéalisateur, codePays) VALUES ("+id_film+", "+titre+", "+annee+", "+genre+", "+resume+", "+id_real+", "+code_pays+");";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
 
