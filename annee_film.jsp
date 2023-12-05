@@ -18,7 +18,7 @@
     String url = "jdbc:mysql://localhost:3306/films";
     String user = "root";
     String password = "root";
-    int annee = request.getParameter("annee");
+    String annee = request.getParameter("annee");
 
 
         // Charger le pilote JDBC
