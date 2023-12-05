@@ -18,6 +18,7 @@
     String url = "jdbc:mysql://localhost:3306/films";
     String user = "root";
     String password = "root";
+    int annee = request.getParameter("annee");
 
         // Charger le pilote JDBC
         Class.forName("com.mysql.jdbc.Driver");
@@ -26,7 +27,7 @@
         Connection conn = DriverManager.getConnection(url, user, password);
 
         // Exemple de requête SQL
-        String sql = "SELECT idFilm, titre, année FROM Film WHERE  année > 2000";
+        String sql = "SELECT idFilm, titre, année FROM Film WHERE  année = "+annee;
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
 
