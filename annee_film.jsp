@@ -11,6 +11,7 @@
     <h1>Exemple de connexion à MySQL via JSP</h1>
     <form action = "annee_film.jsp" method = "GET">
        Annee: <input type = "text" name = "annee">
+       <input type = "submit" value = "Submit" />
        <br />
     </form>
     <% 
